@@ -1,0 +1,80 @@
+---
+title: "A JASP companion to Statistics: data analysis and modelling"
+author: "Maarten Speekenbrink"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output:
+  bookdown::gitbook:
+    dev: svg
+    config:
+      edit : null
+      source: null
+      download: null
+      search: yes
+      fontsettings:
+        theme: white
+        family: sans
+        size: 2
+    css: style.css
+    lib_dir: "book_assets"
+  bookdown::pdf_book:
+    keep_tex: yes
+    dev: "cairo_pdf"
+    latex_engine: xelatex
+    citation_package: natbib
+    template: null
+    pandoc_args: --top-level-division=chapter
+    toc_depth: 3
+    toc_unnumbered: no
+    toc_appendix: yes
+    quote_footer: ["\\VA{", "}{}"]
+  bookdown::epub_book:
+    dev: svglite
+    stylesheet: css/style.css
+documentclass: book
+bibliography: [packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: mspeekenbrink/sdam-book
+description: "A book about how to use JASP related to the book Statistics: Data analysis and modelling."
+---
+
+# Preface {-}
+
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE,
+                      message = FALSE,
+                      fig.align = "center")
+
+knitr::opts_hooks$set(echo = function(options) {
+  if (options$fig.width < options$fig.height) {
+    options$fig.width <- options$fig.height
+  }
+  options
+})
+
+library(sdamr)
+```
+
+```{r myFunctions, echo=FALSE}
+options(digits=3)
+pretNum <- function(x) {
+  prettyNum(x, big.mark=",")
+}
+```
+
+This is a companion to the book "Statistics: Data analysis and modelling". It covers how to use JASP to perform the analyses described there.
+
+<!--
+## Acknowledgements
+
+Parts of these notes were adapted from other sources (if there is a licence allowing that). I acknowledge these sources in footnotes.
+-->
+
+```{r}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```

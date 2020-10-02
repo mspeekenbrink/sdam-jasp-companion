@@ -1,0 +1,3 @@
+# Statistical modelling
+
+## Simulating data: The distributions module
