@@ -2,7 +2,7 @@
 
 ## What is JASP?
 
-JASP is free and open-source software for performing statistical analyses via a graphical user interface. It is developed at, and supported by, the University of Amsterdam. The development of JASP is led by Eric-Jan Wagenmakers, at the Psychological Methods department of teh University of Amsterdam. It offers common statistical analyses in both a Frequentist and Bayesian form. JASP is designed to be easy to use, and familiar to users of SPSS. It generally produces APA style results tables and plots so results may be directly copy-pasted into manuscripts for publication. It promotes reproducible and open science by integrating the analysis settings into the results, as well as directly linking to the open science framework. The development of JASP is supported by the University of Amsterdam and several universities and research funds. 
+JASP is free and open-source software for performing statistical analyses via a graphical user interface. It is developed at, and supported by, the University of Amsterdam. The development of JASP is led by Eric-Jan Wagenmakers, at the Psychological Methods department of the University of Amsterdam. It offers common statistical analyses in both a Frequentist and Bayesian form. JASP is designed to be easy to use, and familiar to users of SPSS. It generally produces APA style results tables and plots so results may be directly copy-pasted into manuscripts for publication. It promotes reproducible and open science by integrating the analysis settings into the results, as well as directly linking to the open science framework. The development of JASP is supported by the University of Amsterdam and several universities and research funds. 
 
 ## Getting started
 
@@ -33,7 +33,7 @@ JASP comes with a number of pre-installed data sets (and accompanying analyses).
 
 ### Importing data
 
-All data sets discussed in my book can be found in "comma separated value" (CSV) format on the same website as these notes. To get started, download the `fifa2010teams` dataset from https://mspeekenbrink.github.io/sdam-jasp-companion/data/fifa2010teams.csv. You will need to download the data set to your computer. After that, go to `&#9776; > Open > Computer > Browse`, and then find the file to open. You should then see something like Figure \@ref(fig:open-data-change-scale).
+All data sets discussed in my book can be found in "comma separated value" (CSV) format on the same website as these notes. To get started, download the `fifa2010teams` dataset from https://mspeekenbrink.github.io/sdam-jasp-companion/data/fifa2010teams.csv. You will need to download the data set to your computer. After that, go to &#9776;` > Open > Computer > Browse`, and then find the file to open. You should then see something like Figure \@ref(fig:open-data-change-scale).
 
 ```{r open-data-change-scale, out.width="100%", fig.cap="An open data set in JASP. Variables are assigned measurement scales and these can be easily changed by clicking on the symbol beside the variable name."}
 knitr::include_graphics("images/01-intro/jasp-change-scale.png")
@@ -86,7 +86,7 @@ There are two types of plots: `Customizable plots` and `Basic plots`. The former
 
 To plot a __histogram__, you can tick `Distribution plot` under `Basic plots`. 
 
-To plot a __boxplot__, you can tick `Boxplot` under `Customizable plots`. If you only tick `Boxplot element` you get a standard boxplot. You can add a mirrored nonparametric density plot by ticking `Violin element`, as well as jittered data values by ticking `Jitter element`. The result is has the same elements as a __raincloud plot__, but because everything is overlaid on top of eachother, it is not as clear.
+To plot a __boxplot__, you can tick `Boxplot` under `Customizable plots`. If you only tick `Boxplot element` you get a standard boxplot. You can add a mirrored nonparametric density plot by ticking `Violin element`, as well as jittered data values by ticking `Jitter element`. The result is has the same elements as a __raincloud plot__, but because everything is overlaid on top of each other, it is not as clear.
 
 To plot a __scatterplot__, you need to have entered at least two variables in the `Variables` box. When you then tick `Scatterplots`  under `Customizable plots`, you get a scatterplot, as well as nonparametric density estimates of each variable in the margins, as well "smooth regression line" which depicts an estimate of the relation between the two variables. If you just want a simple scatterplot, you will need to tick `None` under `Graph above` and `Graph to right of scatter plot`, and untick `Add regression line`.
 
@@ -108,8 +108,8 @@ knitr::include_graphics("images/01-intro/jasp-edit-section.png")
 
 ### Saving tables and plots
 
-To save your results, you can use the `Copy` functionality discussed above to copy and paste your results to a Word processor. You can save individual plots by clicking on the downwards arrow besides the title of the plot, and then select "Save Image As". Finally, you can also export all results to HTML format through `&#9776; > Export Results > Computer > Browse`. 
+To save your results, you can use the `Copy` functionality discussed above to copy and paste your results to a Word processor. You can save individual plots by clicking on the downwards arrow besides the title of the plot, and then select "Save Image As". Finally, you can also export all results to HTML format through &#9776;` > Export Results > Computer > Browse`. 
 
 ### Saving JASP files
 
-As we have already indicated, a really nice feature of JASP is that is stores all data and settings of analyses as part of the output. If you save the output as a JASP file, when you open it next time, you will have the data and analyses and output ready to add to or change. You can save everything you are working on as a JASP file by `&#9776; > Save as > Computer > Browse`, which will then ask you to give a name and location for your file. Next time, you will also be able to use `Save` instead of `Save as`.
+As we have already indicated, a really nice feature of JASP is that is stores all data and settings of analyses as part of the output. If you save the output as a JASP file, when you open it next time, you will have the data and analyses and output ready to add to or change. You can save everything you are working on as a JASP file by &#9776;` > Save as > Computer > Browse`, which will then ask you to give a name and location for your file. Next time, you will also be able to use `Save` instead of `Save as`.
