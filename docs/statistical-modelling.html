@@ -24,7 +24,7 @@
 <meta name="author" content="Maarten Speekenbrink" />
 
 
-<meta name="date" content="2020-10-02" />
+<meta name="date" content="2020-10-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -90,7 +90,8 @@
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="statistical-modelling.html"><a href="statistical-modelling.html"><i class="fa fa-check"></i><b>2</b> Statistical modelling</a><ul>
-<li class="chapter" data-level="2.1" data-path="statistical-modelling.html"><a href="statistical-modelling.html#simulating-data-the-distributions-module"><i class="fa fa-check"></i><b>2.1</b> Simulating data: The distributions module</a></li>
+<li class="chapter" data-level="2.1" data-path="statistical-modelling.html"><a href="statistical-modelling.html#the-distributions-module"><i class="fa fa-check"></i><b>2.1</b> The distributions module</a></li>
+<li class="chapter" data-level="2.2" data-path="statistical-modelling.html"><a href="statistical-modelling.html#simulating-data"><i class="fa fa-check"></i><b>2.2</b> Simulating data</a></li>
 </ul></li>
 </ul>
 
@@ -111,8 +112,27 @@
             <section class="normal" id="section-">
 <div id="statistical-modelling" class="section level1">
 <h1><span class="header-section-number">Chapter 2</span> Statistical modelling</h1>
-<div id="simulating-data-the-distributions-module" class="section level2">
-<h2><span class="header-section-number">2.1</span> Simulating data: The distributions module</h2>
+<div id="the-distributions-module" class="section level2">
+<h2><span class="header-section-number">2.1</span> The distributions module</h2>
+<p>To add the “Distributions” module to the menu, you should first click on the “+” icon on the top right. You will then see a menu with add-on modules. If you tick the “Distributions” item, this will then add a new icon to the main menu, called “Distributions”.</p>
+<p>To be able to run the module, JASP needs to have an open dataset. The number of rows in that dataset will be a limit on the number of observations you can simulate. If you are thinking of running a large simulation, then you need to have a large dataset open. To make this somewhat easier, I’ve created a “dummy” dataset, with one empty variable with 10,000 “observations”. You can download it <a href="https://mspeekenbrink.github.io/sdam-jasp-companion/data/dummy.csv">here</a>. Download the file to a local folder, and then open it as usual with ☰<code>&gt; Open &gt; Computer &gt; Browse</code>.</p>
+<p>When you click on the Distributions icon, you will see a list of included distributions:
+<img src="images/02-modelling/jasp-distributions-menu.png" width="20%" style="display: block; margin: auto;" />
+For now, we will use the “Binomial” option. If you click on that, you will see something like:
+<img src="images/02-modelling/jasp-binomial-mdoule-with-output.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>There are four sub-menu’s that make up a Distributions block:</p>
+<ul>
+<li><code>Show Distribution</code>: This includes various ways to visualize a distribution, such as a <em>Probability mass function</em> – which is the probability distribution as plotted in the SDAM book – and a <em>cumulative distribution function</em> – which displays the probability of a value and anything smaller than it. Importantly, this sub-menu also allows you to change the two parameters of the Binomial distribution: <span class="math inline">\(n\)</span>, the total number of observations (e.g. the total number of guesses), and “p” (which is what we referred to as <span class="math inline">\(\theta\)</span>), the probability of a “success” (e.g. a correct prediction).</li>
+<li><code>Generate and Display Data</code>: this allows you to generate random samples from a Binomial distribution with parameters as specified in the <code>Show Distribution</code> menu. You can choose a new name for the variable containing the simulations, as well as the <em>number of samples</em> you want to draw (this defaults to the number of observations in the open data set, so if you have the “dummy.csv” open, you probably want to change that).</li>
+<li><code>Estimate Parameters</code> This will use a variable with simulated data and provide you with the (maximum likelihood) estimates of the parameters, and optionally the “Standard error” (this is the standard deviation of the sampling distribution of the estimates) and a confidence interval (we will get to this later on). Note that if you say simulate 100 draws from a Binomial distribution each with <span class="math inline">\(n=8\)</span> observations, you get a single estimate over all these 100 simulations, not an estimate for each (which is what we have been doing in SDAM up to now).</li>
+<li><code>Assess Fit</code>: This provides some means to compare the simulated sample you generated to the true distribution from which it was sampled. These are mainly graphical tools, such as a histogram with theoretical probabilities overlayed, and Q-Q and P-P plots (more about these later). In addition, you there is a <em>Chi-square</em> test which tests the null hypothesis that the data was drawn from a Binomial distribution with the parameters as specified in the <code>Show Distribution</code> menu. More about such tests later as well.</li>
+</ul>
+</div>
+<div id="simulating-data" class="section level2">
+<h2><span class="header-section-number">2.2</span> Simulating data</h2>
+<p><img src="images/02-modelling/jasp-distributions-binomial-generate-sample.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>To simulate data with the Distributions module, you should first choose a name for the new variable which will contain your simulations. Also make sue you have selected the correct parameters (<span class="math inline">\(n\)</span> and <span class="math inline">\(p\)</span>) in the <code>Show Distribution</code> menu. Then choose the number of simulated data points to draw under <code>Number of samples</code> (e.g. 100). You can then click on the <code>Draw samples</code> button to generate the simulated data. When I was trying this, I then had to click inside the Variables box to actually see the new variable show up. You may have to do this as well. You can then select the new variable and place it in the <code>Get variable from data set</code> box. If you ticked <code>Descriptives</code> and for instance a <code>Bar plot</code>, you should then see populated with the data from the simulation. Voila!</p>
+<p>if you actually want to see the simulated variable, you can get back to the data set by clicking on the little right pointing arrow completely on the left-hand side of the screen. This will open the data view, which you can close again by clicking on the left pointing arrow on the complete right-hand side of the screen.</p>
 
 </div>
 </div>

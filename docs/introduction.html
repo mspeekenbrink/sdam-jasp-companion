@@ -24,7 +24,7 @@
 <meta name="author" content="Maarten Speekenbrink" />
 
 
-<meta name="date" content="2020-10-02" />
+<meta name="date" content="2020-10-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -90,7 +90,8 @@
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="statistical-modelling.html"><a href="statistical-modelling.html"><i class="fa fa-check"></i><b>2</b> Statistical modelling</a><ul>
-<li class="chapter" data-level="2.1" data-path="statistical-modelling.html"><a href="statistical-modelling.html#simulating-data-the-distributions-module"><i class="fa fa-check"></i><b>2.1</b> Simulating data: The distributions module</a></li>
+<li class="chapter" data-level="2.1" data-path="statistical-modelling.html"><a href="statistical-modelling.html#the-distributions-module"><i class="fa fa-check"></i><b>2.1</b> The distributions module</a></li>
+<li class="chapter" data-level="2.2" data-path="statistical-modelling.html"><a href="statistical-modelling.html#simulating-data"><i class="fa fa-check"></i><b>2.2</b> Simulating data</a></li>
 </ul></li>
 </ul>
 
@@ -113,7 +114,7 @@
 <h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
 <div id="what-is-jasp" class="section level2">
 <h2><span class="header-section-number">1.1</span> What is JASP?</h2>
-<p>JASP is free and open-source software for performing statistical analyses via a graphical user interface. It is developed at, and supported by, the University of Amsterdam. The development of JASP is led by Eric-Jan Wagenmakers, at the Psychological Methods department of teh University of Amsterdam. It offers common statistical analyses in both a Frequentist and Bayesian form. JASP is designed to be easy to use, and familiar to users of SPSS. It generally produces APA style results tables and plots so results may be directly copy-pasted into manuscripts for publication. It promotes reproducible and open science by integrating the analysis settings into the results, as well as directly linking to the open science framework. The development of JASP is supported by the University of Amsterdam and several universities and research funds.</p>
+<p>JASP is free and open-source software for performing statistical analyses via a graphical user interface. It is developed at, and supported by, the University of Amsterdam. The development of JASP is led by Eric-Jan Wagenmakers, at the Psychological Methods department of the University of Amsterdam. It offers common statistical analyses in both a Frequentist and Bayesian form. JASP is designed to be easy to use, and familiar to users of SPSS. It generally produces APA style results tables and plots so results may be directly copy-pasted into manuscripts for publication. It promotes reproducible and open science by integrating the analysis settings into the results, as well as directly linking to the open science framework. The development of JASP is supported by the University of Amsterdam and several universities and research funds.</p>
 </div>
 <div id="getting-started" class="section level2">
 <h2><span class="header-section-number">1.2</span> Getting started</h2>
@@ -143,7 +144,7 @@ Figure 1.1: Opening screen of JASP
 </div>
 <div id="importing-data" class="section level3">
 <h3><span class="header-section-number">1.4.2</span> Importing data</h3>
-<p>All data sets discussed in my book can be found in “comma separated value” (CSV) format on the same website as these notes. To get started, download the <code>fifa2010teams</code> dataset from <a href="https://mspeekenbrink.github.io/sdam-jasp-companion/data/fifa2010teams.csv" class="uri">https://mspeekenbrink.github.io/sdam-jasp-companion/data/fifa2010teams.csv</a>. You will need to download the data set to your computer. After that, go to <code>&amp;#9776; &gt; Open &gt; Computer &gt; Browse</code>, and then find the file to open. You should then see something like Figure <a href="introduction.html#fig:open-data-change-scale">1.2</a>.</p>
+<p>All data sets discussed in my book can be found in “comma separated value” (CSV) format on the same website as these notes. To get started, download the <code>fifa2010teams</code> dataset from <a href="https://mspeekenbrink.github.io/sdam-jasp-companion/data/fifa2010teams.csv" class="uri">https://mspeekenbrink.github.io/sdam-jasp-companion/data/fifa2010teams.csv</a>. You will need to download the data set to your computer. After that, go to ☰<code>&gt; Open &gt; Computer &gt; Browse</code>, and then find the file to open. You should then see something like Figure <a href="introduction.html#fig:open-data-change-scale">1.2</a>.</p>
 <div class="figure" style="text-align: center"><span id="fig:open-data-change-scale"></span>
 <img src="images/01-intro/jasp-change-scale.png" alt="An open data set in JASP. Variables are assigned measurement scales and these can be easily changed by clicking on the symbol beside the variable name." width="100%" />
 <p class="caption">
@@ -181,7 +182,7 @@ The sample standard deviation is then simply the square root of the sample varia
 <img src="images/01-intro/jasp-plots-menu.png" width="80%" style="display: block; margin: auto;" /></p>
 <p>There are two types of plots: <code>Customizable plots</code> and <code>Basic plots</code>. The former allow you some flexibility in what the plot contains, while the latter are 9even more) constrained.</p>
 <p>To plot a <strong>histogram</strong>, you can tick <code>Distribution plot</code> under <code>Basic plots</code>.</p>
-<p>To plot a <strong>boxplot</strong>, you can tick <code>Boxplot</code> under <code>Customizable plots</code>. If you only tick <code>Boxplot element</code> you get a standard boxplot. You can add a mirrored nonparametric density plot by ticking <code>Violin element</code>, as well as jittered data values by ticking <code>Jitter element</code>. The result is has the same elements as a <strong>raincloud plot</strong>, but because everything is overlaid on top of eachother, it is not as clear.</p>
+<p>To plot a <strong>boxplot</strong>, you can tick <code>Boxplot</code> under <code>Customizable plots</code>. If you only tick <code>Boxplot element</code> you get a standard boxplot. You can add a mirrored nonparametric density plot by ticking <code>Violin element</code>, as well as jittered data values by ticking <code>Jitter element</code>. The result is has the same elements as a <strong>raincloud plot</strong>, but because everything is overlaid on top of each other, it is not as clear.</p>
 <p>To plot a <strong>scatterplot</strong>, you need to have entered at least two variables in the <code>Variables</code> box. When you then tick <code>Scatterplots</code> under <code>Customizable plots</code>, you get a scatterplot, as well as nonparametric density estimates of each variable in the margins, as well “smooth regression line” which depicts an estimate of the relation between the two variables. If you just want a simple scatterplot, you will need to tick <code>None</code> under <code>Graph above</code> and <code>Graph to right of scatter plot</code>, and untick <code>Add regression line</code>.</p>
 </div>
 </div>
@@ -201,11 +202,11 @@ The sample standard deviation is then simply the square root of the sample varia
 <h2><span class="header-section-number">1.7</span> Saving your work</h2>
 <div id="saving-tables-and-plots" class="section level3">
 <h3><span class="header-section-number">1.7.1</span> Saving tables and plots</h3>
-<p>To save your results, you can use the <code>Copy</code> functionality discussed above to copy and paste your results to a Word processor. You can save individual plots by clicking on the downwards arrow besides the title of the plot, and then select “Save Image As”. Finally, you can also export all results to HTML format through <code>&amp;#9776; &gt; Export Results &gt; Computer &gt; Browse</code>.</p>
+<p>To save your results, you can use the <code>Copy</code> functionality discussed above to copy and paste your results to a Word processor. You can save individual plots by clicking on the downwards arrow besides the title of the plot, and then select “Save Image As”. Finally, you can also export all results to HTML format through ☰<code>&gt; Export Results &gt; Computer &gt; Browse</code>.</p>
 </div>
 <div id="saving-jasp-files" class="section level3">
 <h3><span class="header-section-number">1.7.2</span> Saving JASP files</h3>
-<p>As we have already indicated, a really nice feature of JASP is that is stores all data and settings of analyses as part of the output. If you save the output as a JASP file, when you open it next time, you will have the data and analyses and output ready to add to or change. You can save everything you are working on as a JASP file by <code>&amp;#9776; &gt; Save as &gt; Computer &gt; Browse</code>, which will then ask you to give a name and location for your file. Next time, you will also be able to use <code>Save</code> instead of <code>Save as</code>.</p>
+<p>As we have already indicated, a really nice feature of JASP is that is stores all data and settings of analyses as part of the output. If you save the output as a JASP file, when you open it next time, you will have the data and analyses and output ready to add to or change. You can save everything you are working on as a JASP file by ☰<code>&gt; Save as &gt; Computer &gt; Browse</code>, which will then ask you to give a name and location for your file. Next time, you will also be able to use <code>Save</code> instead of <code>Save as</code>.</p>
 
 </div>
 </div>
